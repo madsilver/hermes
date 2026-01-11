@@ -1,15 +1,11 @@
 # Hermes
 
-Hermes is an **open-source distributed chat system** focused on **learning, clarity, and explicit design**.  
-It implements a custom application-layer protocol — the **Hermes Protocol (HP)** — running **directly over raw TCP**, without HTTP in the core messaging path.
+Hermes is an open-source distributed chat system focused on learning, clarity, and explicit design.  
+It implements a custom application-layer protocol — the Hermes Protocol (HP) — running directly over raw TCP, without HTTP in the core messaging path.
 
-The project is designed to be **readable, hackable, and educational**, while still following sound distributed-systems principles.
+The project is designed to be readable, hackable, and educational, while still following sound distributed-systems principles.
 
 ---
-
-
-::contentReference[oaicite:0]{index=0}
-
 
 ## What is Hermes?
 
@@ -21,7 +17,8 @@ Hermes is a hands-on exploration of:
 - Failure detection and recovery
 - Low-overhead, long-lived TCP connections
 
-Rather than relying on existing abstractions (HTTP, REST, gRPC), Hermes builds the communication layer explicitly so contributors can **see and understand what’s really happening**.
+Rather than relying on existing abstractions (HTTP, REST, gRPC), Hermes builds the communication layer explicitly so 
+contributors can see and understand what’s really happening.
 
 ---
 
@@ -29,23 +26,11 @@ Rather than relying on existing abstractions (HTTP, REST, gRPC), Hermes builds t
 
 Hermes aims to:
 
-- Be a **clear reference implementation** of a distributed chat system
-- Use a **custom protocol** designed for stateful, event-driven communication
-- Support **horizontal scaling** via multiple cooperating servers
-- Keep the system **simple, explicit, and debuggable**
+- Be a clear reference implementation of a distributed chat system
+- Use a custom protocol designed for stateful, event-driven communication
+- Support horizontal scaling via multiple cooperating servers
+- Keep the system simple, explicit, and debuggable
 - Serve as a learning resource for developers interested in distributed systems
-
----
-
-## Non-Goals
-
-Hermes intentionally does **not** aim to:
-
-- Compete with production chat platforms
-- Hide complexity behind heavy frameworks
-- Use HTTP/REST for core messaging
-- Optimize prematurely at the cost of readability
-- Provide a polished UI or end-user product (at least for now)
 
 ---
 
@@ -74,7 +59,7 @@ Hermes consists of three main components:
 
 ## Hermes Protocol (HP)
 
-The **Hermes Protocol (HP)** is a custom, message-oriented protocol with the following properties:
+The Hermes Protocol (HP) is a custom, message-oriented protocol with the following properties:
 
 - **Transport**: Raw TCP
 - **Encoding**: JSON (UTF-8)
@@ -86,21 +71,6 @@ HP is used for:
 - Client ↔ Server communication
 - Server ↔ Server communication
 
-HTTP is **explicitly excluded** from the core protocol stack.
-
----
-
-## Why Raw TCP?
-
-Hermes uses HP directly over TCP to achieve:
-
-- **Lower overhead** (fewer bytes, less parsing, fewer allocations)
-- **Lower latency** for real-time messaging
-- **Full control** over framing and state
-- A **clear mental model** aligned with distributed systems fundamentals
-
-HTTP may be added later for **auxiliary tooling** (e.g. admin or metrics endpoints), but never for core message delivery.
-
 ---
 
 ## Technology Stack
@@ -111,10 +81,10 @@ HTTP may be added later for **auxiliary tooling** (e.g. admin or metrics endpoin
 - **Serialization**: JSON
 - **Build & Deploy**: Single static binaries
 
-All major technical choices are documented using **Architecture Decision Records (ADRs)**.
+All major technical choices are documented using Architecture Decision Records (ADRs).
 
 ---
 
 ## Name
 
-Hermes is named after the Greek messenger god — fitting for a system built entirely around **message delivery**.
+Hermes is named after the Greek messenger god — fitting for a system built entirely around message delivery.
