@@ -3,8 +3,6 @@
 Hermes is a distributed P2P chat system, designed to explore modern networking concepts, binary protocols, and 
 distributed systems.
 
----
-
 ## Architectural Overview
 
 * Peers connect directly to each other.
@@ -16,19 +14,13 @@ distributed systems.
 
 Once peers are discovered, all communication happens peer‑to‑peer.
 
----
-
 ## Transport Layer
 
 Hermes uses QUIC over UDP as its transport protocol.
 
----
-
 ## License
 
 Apache License 2.0
-
----
 
 ## Project Name
 
